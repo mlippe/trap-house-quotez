@@ -12,5 +12,12 @@
   },
   "dependencies": {
     "astro": "^1.6.15"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.7.0",
+    "sass": "^1.56.2",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0"
   }
 }

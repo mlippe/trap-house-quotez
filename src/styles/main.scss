@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@import './fonts.scss';
+@import './variables.scss';
+
+html {
+  font-family: Lexend, sans-serif;
+  background-color: $bg;
+  font-size: 16px;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: $card-bg;
+}
