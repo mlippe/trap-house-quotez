@@ -1,21 +1,22 @@
 ---
-import PlayerApp from '../layouts/PlayerApp.astro';
-import Player from '../components/Player.astro';
-import Quotes from '../components/Quotes.astro';
-import data from '../data/data.json';
+import Default from '../layouts/default.astro'
+import Player from '../components/Player.astro'
+import Quotes from '../components/Quotes.astro'
+import data from '../data/data.json'
 ---
 
-<PlayerApp title='Welcome to Astro.'>
+<Default title="Welcome to Astro.">
+  <span class="font-meta"> 1 nice am been DaTechies! 🌭</span>
   <main>
-    <section class='banner card'>
-      <div class='left'>
-        <img src='icon/thk_logo.svg' alt='' />
-        <h1 class='font-meta'>TrapHouseQuotez</h1>
+    <section class="banner card">
+      <div class="left">
+        <img src="icon/thk_logo.svg" alt="" />
+        <h1 class="font-meta">1 nicer scheiß (sagt Laura)</h1>
       </div>
-      <div class='right'><img src='icon/menu.svg' alt='' /></div>
+      <div class="right"><img src="icon/menu.svg" alt="" /></div>
     </section>
 
-    <section class='content'>
+    <section class="content">
       <Player />
       <Quotes data={data} />
     </section>
@@ -26,9 +27,9 @@ import data from '../data/data.json';
         body='Learn how Astro works and explore the official API docs.'
       /> -->
   </main>
-</PlayerApp>
+</Default>
 
-<style>
+<style lang="scss">
   main {
     margin: auto;
     padding: 1.5rem;
@@ -41,8 +42,10 @@ import data from '../data/data.json';
     align-items: center;
   }
 
-  .banner .left {
-    display: flex;
-    gap: 1.25rem;
+  .banner {
+    .left {
+      display: flex;
+      gap: 1.25rem;
+    }
   }
 </style>
