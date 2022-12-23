@@ -5,66 +5,81 @@
     "imageSrc": "image/s05e06.jpg",
     "quotes": [
       {
-        "quoteTitle": "Let's go 🌭",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Let's go 🌭",
+        "source": "audio/s05e06/01_lets_go.mp3"
       },
       {
-        "quoteTitle": "Back at it",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Back at it",
+        "source": "audio/s05e06/02_back_at_it.mp3"
       },
       {
-        "quoteTitle": "Zum letzten Mal",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Zum letzten Mal",
+        "source": "audio/s05e06/03_zum_letzten_mal.mp3"
       },
       {
-        "quoteTitle": "Messy, aber sehr lecker 🌭",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Messy, aber sehr lecker 🌭",
+        "source": "audio/s05e06/04_messy_aber_sehr_lecker.mp3"
       },
       {
-        "quoteTitle": "Wir sind hier um Chilli zu cooken",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Wir sind hier um Chilli zu cooken",
+        "source": "audio/s05e06/05_wir_sind_hier_um_chillie_zu_cooken.mp3"
       },
       {
-        "quoteTitle": "Wiener Schnitzel 🐄",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Wiener Schnitzel 🐄",
+        "source": "audio/s05e06/06_wiener_schnitzel.mp3"
       },
       {
-        "quoteTitle": "Heute probieren wir ein anderes Recipe",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Heute probieren wir ein anderes Recipe",
+        "source": "audio/s05e06/07_anderes_recipe.mp3"
       },
-      { "quoteTitle": "Check", "audioSource": "audio/s05e06_back-at-it.m4a" },
-      { "quoteTitle": "We lit", "audioSource": "audio/s05e06_back-at-it.m4a" },
+      { "title": "Check", "source": "audio/s05e06/08_check.mp3" },
+      { "title": "We lit", "source": "audio/s05e06/09_we_lit.mp3" },
       {
-        "quoteTitle": "Nicer Assist",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
-      },
-      {
-        "quoteTitle": "Fleischeslust",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Nicer Assist",
+        "source": "audio/s05e06/10_nicer_assist.mp3"
       },
       {
-        "quoteTitle": "Deckel Druff",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Fleischeslust",
+        "source": "audio/s05e06/11_fleischeslust.mp3"
       },
       {
-        "quoteTitle": "So langsam wird es thick",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Deckel Druff",
+        "source": "audio/s05e06/12_deckel_druff.mp3"
       },
       {
-        "quoteTitle": "Wow das sieht schon sehr nice aus",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "So langsam wird es thick",
+        "source": "audio/s05e06/13_so_langsam_wird_es_thick.mp3"
       },
       {
-        "quoteTitle": "Die Farbe ist perfekt",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Wow das sieht schon sehr nice aus",
+        "source": "audio/s05e06/14_wow.mp3"
       },
-      { "quoteTitle": "Sheesh", "audioSource": "audio/s05e06_back-at-it.m4a" },
-      { "quoteTitle": "Hmmmmm", "audioSource": "audio/s05e06_back-at-it.m4a" },
       {
-        "quoteTitle": "Kleines Suprise",
-        "audioSource": "audio/s05e06_back-at-it.m4a"
+        "title": "Die Farbe ist perfekt",
+        "source": "audio/s05e06/15_die_farbe_ist_perfekt.mp3"
+      },
+      { "title": "Sheesh", "source": "audio/s05e06/16_sheeesh.mp3" },
+      { "title": "Hmmmmm", "source": "audio/s05e06/17_mhhhm.mp3" },
+      { "title": "Dayum", "source": "audio/s05e06/18_dayum.mp3" },
+      {
+        "title": "Kleines Suprise",
+        "source": "audio/s05e06/19_kleines_suprise.mp3"
       }
     ]
   },
-  { "title": "#S05E01 - Lemon spice", "videoLink": "asd" }
+  {
+    "title": "#S05E01 - Lemon spice",
+    "videoLink": "https://www.youtube.com/watch?v=qNQh6kqYL3Y&ab_channel=MoneyBoy",
+    "imageSrc": "image/s05e01.jpg",
+    "quotes": [
+      {
+        "title": "Let's go 🌭",
+        "source": "audio/s05e06/01_lets_go.mp3"
+      },
+      {
+        "title": "Back at it",
+        "source": "audio/s05e06/02_back_at_it.mp3"
+      }
+    ]
+  }
 ]
