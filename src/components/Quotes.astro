@@ -4,10 +4,12 @@ export interface Props {
 }
 
 const { data } = Astro.props
+
+import QuoteItem from '../components/QuoteItem.astro'
 ---
 
 {
-  data.map(function (episode, index) {
+  data.map(function (episode) {
     return (
       <div class="quotes card">
         <div class="header">
@@ -18,58 +20,103 @@ const { data } = Astro.props
             <img src="icon/external.svg" alt="" />
           </a>
         </div>
+        <div class="content">
+          <div class="content-head font-table-head">
+            <span>#</span>
+            <span>Quote</span>
+            <span>duration</span>
+          </div>
+          {episode.quotes.map(function (quote, index) {
+            return (
+              <QuoteItem
+                index={index}
+                title={quote.title}
+                source={quote.source}
+              />
+            )
+          })}
+        </div>
       </div>
     )
   })
 }
 
-<style>
-  .quotes .header {
-    background-color: aliceblue;
-    display: flex;
-    padding: 2rem;
-    position: relative;
-    gap: 42px;
-    border-radius: 0.75rem 0.75rem 2rem 2rem;
-    overflow: hidden;
-  }
+<style lang="scss">
+  .quotes {
+    padding: 0;
 
-  .quotes .header > img {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 0.75rem;
-    z-index: 1;
-  }
+    .header {
+      background-color: aliceblue;
+      display: flex;
+      padding: 2rem;
+      position: relative;
+      gap: 42px;
+      border-radius: 0.75rem 0.75rem 2rem 2rem;
+      overflow: hidden;
 
-  .quotes .header > img.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.2);
-    filter: blur(100px);
-    transform-origin: center;
-    z-index: 0;
-  }
+      & > img {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 0.75rem;
+        z-index: 1;
 
-  .quotes .header a {
-    display: flex;
-    position: relative;
-    z-index: 1;
-    gap: 24px;
-    align-items: center;
-    text-decoration: none;
-    text-decoration-color: white;
-  }
+        &.background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: scale(1.2);
+          filter: blur(42px);
+          transform-origin: center;
+          z-index: 0;
+        }
+      }
 
-  .quotes .header a:hover {
-    text-decoration: underline;
-  }
+      a {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        gap: 24px;
+        color: white;
+        align-items: center;
+        text-decoration: none;
+        text-decoration-color: white;
 
-  .quotes .header a img {
-    width: 18px;
-    height: 18px;
+        &:hover {
+          text-decoration: underline;
+          color: white;
+          text-decoration-color: white;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .content {
+      padding: 2rem;
+
+      .content-head {
+        display: flex;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid #aeb4c750;
+
+        span:first-of-type {
+          width: 9%;
+        }
+
+        span:nth-of-type(2) {
+          width: 71%;
+        }
+
+        span:last-of-type {
+          width: 20%;
+        }
+      }
+    }
   }
 </style>
