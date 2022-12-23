@@ -1,0 +1,42 @@
+---
+export interface Props {
+  index: number
+  title: string
+  source: string
+}
+
+const { index, title, source } = Astro.props
+---
+
+<div class="quote-item font-information">
+  <span>{index}</span>
+  <span class="font-title">{title}</span>
+  <span>duration</span>
+  <img src="icon/heart.svg" alt="" />
+  <audio controls>
+    <source src={source} type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<style lang="scss">
+  .quote-item {
+    display: flex;
+
+    span:first-of-type {
+      width: 9%;
+    }
+
+    span:nth-of-type(2) {
+      width: 71%;
+    }
+
+    span:last-of-type {
+      width: 17%;
+    }
+
+    img {
+      width: 3%;
+    }
+  }
+</style>
