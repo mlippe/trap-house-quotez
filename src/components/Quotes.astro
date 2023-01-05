@@ -1,6 +1,18 @@
 ---
+type Quote = {
+  title: string
+  source: string
+}
+
+type Episode = {
+  title: string
+  videoLink: string
+  imageSrc: string
+  quotes: Quote[]
+}
+
 export interface Props {
-  data: Array<any>
+  data: Episode[]
 }
 
 const { data } = Astro.props
@@ -9,36 +21,28 @@ import QuoteItem from '../components/QuoteItem.astro'
 ---
 
 {
-  data.map(function (episode) {
-    return (
-      <div class="quotes card">
-        <div class="header">
-          <img class="background" src={episode.imageSrc} alt="" />
-          <img src={episode.imageSrc} alt="" />
-          <a href={episode.videoLink} target="_blank">
-            <h2 class="font-title-large">{episode.title}</h2>
-            <img src="icon/external.svg" alt="" />
-          </a>
-        </div>
-        <div class="content">
-          <div class="content-head font-table-head">
-            <span>#</span>
-            <span>Quote</span>
-            <span>duration</span>
-          </div>
-          {episode.quotes.map(function (quote, index) {
-            return (
-              <QuoteItem
-                index={index}
-                title={quote.title}
-                source={quote.source}
-              />
-            )
-          })}
-        </div>
+  data.map(({ title, videoLink, imageSrc, quotes }) => (
+    <div class="quotes card">
+      <div class="header">
+        <img class="background" src={imageSrc} alt="" />
+        <img src={imageSrc} alt="" />
+        <a href={videoLink} target="_blank">
+          <h2 class="font-title-large">{title}</h2>
+          <img src="icon/external.svg" alt="" />
+        </a>
       </div>
-    )
-  })
+      <div class="content">
+        <div class="content-head font-table-head">
+          <span>#</span>
+          <span>Quote</span>
+          <span>duration</span>
+        </div>
+        {quotes.map((quote, index) => (
+          <QuoteItem index={index} {...quote} />
+        ))}
+      </div>
+    </div>
+  ))
 }
 
 <style lang="scss">
