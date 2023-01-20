@@ -2,7 +2,6 @@
 import Default from '../layouts/default.astro'
 import Player from '../components/Player.astro'
 import Quotes from '../components/Quotes.astro'
-import data from '../data/data.json'
 ---
 
 <Default title="Welcome to Astro.">
@@ -17,7 +16,7 @@ import data from '../data/data.json'
 
     <section class="content">
       <Player />
-      <Quotes data={data} />
+      <Quotes />
     </section>
 
     <!-- <Card

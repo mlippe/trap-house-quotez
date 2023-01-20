@@ -1,6 +1,5 @@
 {
   "name": "@example/basics",
-  "type": "module",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,12 +8,17 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier": "prettier --write src/**"
+    "prettier": "prettier --write src/**",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output src/contentfulTypes.d.ts"
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "astro": "^1.9.0",
+    "contentful": "^9.2.17"
   },
   "devDependencies": {
+    "contentful-management": "^10.26.0",
+    "contentful-typescript-codegen": "^3.4.0",
+    "dotenv": "^16.0.3",
     "prettier": "^2.8.1",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-astro": "^0.7.2",
