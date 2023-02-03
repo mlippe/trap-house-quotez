@@ -1,7 +1,7 @@
-import { createClient } from 'contentful'
+import contentful from 'contentful'
 import type { EntryCollection } from 'contentful'
 
-export const contentfulClient = createClient({
+export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   environment: import.meta.env.CONTENTFUL_ENVIRONMENT,
   accessToken: import.meta.env.DEV
