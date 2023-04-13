@@ -4,6 +4,17 @@ import Player from '../components/Player.astro'
 import Quotes from '../components/Quotes.astro'
 ---
 
+<script>
+  const url =
+    import.meta.env.MODE === 'production'
+      ? 'https://us-central1-trap-house-quotez.cloudfunctions.net/helloWorld'
+      : 'http://127.0.0.1:5001/trap-house-quotez/us-central1/helloWorld'
+      
+  fetch(url)
+    .then((res) => res.json())
+    .then((res) => console.log(res))
+</script>
+
 <Default title="Welcome to Astro.">
   <main>
     <section class="banner card">
