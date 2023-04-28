@@ -5,12 +5,12 @@ const handler = cors({ origin: true })
 
 export const helloWorld = functions.https.onRequest((request, response) => {
   handler(request, response, () => {
+    const ids = request.body.fields.quotesAutomated['en-US'].map((entry: { sys: { id: any } }) => entry.sys.id);
     const data = {
       title: request.body.fields.title['en-US'],
-      startTimestamp: request.body.fields.startTimestamp['en-US'],
-      endTimestamp: request.body.fields.endTimestamp['en-US']
+      videoLink: request.body.fields.videoLink['en-US'],
     }
-    functions.logger.log(data)
-    response.send({ message: 'Sheeesh from ze boy 🔪', data })
+
+    response.send({ message: 'Sheeesh from ze girl 🔪', data, ids })
   })
 })
